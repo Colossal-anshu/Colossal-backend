@@ -9,10 +9,7 @@ const port=7000;
 const expresslayout=require('express-ejs-layouts');
 const db=require('./config/mongoose');
 const cokkiesparser=require('cookie-parser');
-const passport=require('passport');
 
-// using session and passport to  authenticate 
-const session=require('express-session');
 const passportlocal=require('./config/passport-local');
 const passportjwt=require('./config/passport-jwt');
 const passportgoogle=require('./config/passport_googleoauth2');

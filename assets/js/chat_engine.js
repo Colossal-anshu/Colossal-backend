@@ -5,7 +5,7 @@ class ChatEngine
         this.chatBoxId=$(`#${chatBoxId}`);
         this.userEmail=userEmail;
         this.chatRoom=chatRoom;
-        this.socket=io.connect('http://3.81.51.218:5000');
+        this.socket=io.connect('http://54.156.64.13:5000');
 
         if(this.userEmail)
         {
@@ -44,10 +44,10 @@ class ChatEngine
 
 
         $('#send-message').click(function(){
-           // console.log('send is cliked');
+            console.log('send is cliked');
             let msg = $('#chat-message-input').val();
             $('#chat-message-input').text('');
-            //console.log(msg);
+            console.log(msg);
 
             if (msg != ''){
                 self.socket.emit('send_message', {

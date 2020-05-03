@@ -260,9 +260,11 @@ module.exports.create = async function(req, res){
     }
 
   let user=  await User.findOne({email: req.body.email});
-
+          console.log('creating user',req.body);
         if (!user){
            let newuser= await User.create(req.body);
+
+           
  
         
         let job=queue.create('signup',newuser).save((err)=>
